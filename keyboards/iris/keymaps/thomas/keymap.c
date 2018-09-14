@@ -22,10 +22,10 @@ enum custom_keycodes {
 #define KC_BR_FORW LALT(KC_RIGHT)          // Browser Forward
 #define KC_BR_CT LCTL(KC_W) // Browser close
 #define KC_BR_NT LSFT(LCTL(KC_TAB)) //Browser next tab
-#define KC_BR_NT LCTL(KC_TAB) //Browser prev tab
+#define KC_BR_PT LCTL(KC_TAB) //Browser prev tab
 
 #define KC_ENTS LSFT_T(KC_ENT) // Shift (hold), Enter (tap)
-#define KC_ESCG GUIT_T(KC_ESC) // GUI (hold), Escape (tab)
+#define KC_ESCG LGUI_T(KC_ESC) // GUI (hold), Escape (tab)
 #define KC_ESCC LCTL_T(KC_ESC)    // Control (hold), Escape (tap)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
