@@ -23,14 +23,15 @@ enum custom_keycodes {
 #define KC_BR_NT LSFT(LCTL(KC_TAB)) //Browser next tab
 #define KC_BR_PT LCTL(KC_TAB) //Browser prev tab
 
-#define KC_ENTS LSFT_T(KC_ENT) // Shift (hold), Enter (tap)
-#define KC_ESCG LGUI_T(KC_ESC) // GUI (hold), Escape (tab)
 #define KC_ESCC LCTL_T(KC_ESC)    // Control (hold), Escape (tap)
-#define KC_TABL LT(_LOWER, KC_TAB) // LOWER (hold), tab (tap)
-#define KC_DELR LT(_RAISE, KC_DEL) // RAISE (hold), DEL (tap)
-#define KC_SPCC LCTL_T(KC_SPC) // Control (hold) , Space (tap)
-#define KC_BSPCA LALT_T(KC_BSPC) // ALT (hold) , backspace (tap)
 
+#define KC_MOD1 LCTL_T(KC_TAB) // Control (hold) , Tab(tap)
+#define KC_MOD2 LGUI_T(KC_ESC) // GUI (hold), Escape (tab)
+#define KC_MOD3 LT(_LOWER, KC_SPC) // LOWER (hold), Space (tap)
+
+#define KC_MOD4 LT(_RAISE, KC_BSPC) // RAISE (hold), Backspace (tap)
+#define KC_MOD5 LSFT_T(KC_ENT) // Shift (hold), Enter (tap)
+#define KC_MOD6 LALT_T(KC_DEL) // ALT (hold) , DEL(tap)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -44,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
    XXXXXXX, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    XXXXXXX,  XXXXXXX,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, XXXXXXX,
 //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘└───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                 KC_TABL,  KC_ESCG, KC_SPCC,          KC_BSPCA, KC_ENTS, KC_DELR
+                                 KC_MOD1,  KC_MOD2, KC_MOD3,          KC_MOD4, KC_MOD5, KC_MOD6
                               // └────────┴────────┴────────┘         └────────┴────────┴────────┘
 ),
 [_RAISE] = LAYOUT(
