@@ -26,8 +26,8 @@ enum custom_keycodes {
 #define KC_ENTS LSFT_T(KC_ENT) // Shift (hold), Enter (tap)
 #define KC_ESCG LGUI_T(KC_ESC) // GUI (hold), Escape (tab)
 #define KC_ESCC LCTL_T(KC_ESC)    // Control (hold), Escape (tap)
-#define KC_TABL LT(LOWER, KC_TAB) // LOWER (hold), tab (tap)
-#define KC_DELR LT(RAISE, KC_DEL) // RAISE (hold), DEL (tap)
+#define KC_TABL LT(_LOWER, KC_TAB) // LOWER (hold), tab (tap)
+#define KC_DELR LT(_RAISE, KC_DEL) // RAISE (hold), DEL (tap)
 #define KC_SPCC LCTL_T(KC_SPC) // Control (hold) , Space (tap)
 #define KC_BSPCA LALT_T(KC_BSPC) // ALT (hold) , backspace (tap)
 
@@ -57,20 +57,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
    XXXXXXX, KC_GRV,  KC_BSLS,KC_UNDS ,KC_PERC, KC_DQT, _______,  _______, KC_ASTR,   KC_1,    KC_2,    KC_3   , _______,XXXXXXX,
 //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘└───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                 MO(ADJUST), _______,_______,           _______, _______, _______
+                                   ADJUST, _______,_______,           _______, _______, _______
                               // └────────┴────────┴────────┘         └────────┴────────┴────────┘
 ),
 [_LOWER] = LAYOUT(
 //┌────────┬────────┬────────┬────────┬────────┬────────┐                  ┌────────┬────────┬────────┬────────┬────────┬────────┐
    _______, _______, _______, _______, _______, _______,                    _______, _______, _______, _______, _______, _______,
 //├────────┼────────┼────────┼────────┼────────┼────────┤                  ├────────┼────────┼────────┼────────┼────────┼────────┤
-   _______, _______, KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R,                    KC_LPRN, KC_RPRN, KC_HOME, KC_PGUP, _______, _______,
+   _______, _______, KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R,                    KC_LPRN, KC_RPRN,  KC_INS, KC_HOME, KC_PGUP, _______,
 //├────────┼────────┼────────┼────────┼────────┼────────┤                  ├────────┼────────┼────────┼────────┼────────┼────────┤
-   _______, _______,  KC_LEFT,KC_DOWN ,KC_UP  ,KC_RIGHT,                    KC_LCBR, KC_RCBR, KC_END, KC_PGDOWN, _______, _______,
+   _______, _______,  KC_LEFT,KC_DOWN ,KC_UP  ,KC_RIGHT,                    KC_LCBR, KC_RCBR, KC_DEL,  KC_END, KC_PGDOWN, _______,
 //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
    _______, _______, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, _______,  _______, KC_LCBR, KC_RCBR, _______, _______, _______, _______,
 //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘└───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                  _______, _______, _______,           _______,  _______,MO(ADJUST)
+                                  _______, _______, _______,           _______,  _______,ADJUST
                               // └────────┴────────┴────────┘         └────────┴────────┴────────┘
 ),
 [_ADJUST] = LAYOUT(
