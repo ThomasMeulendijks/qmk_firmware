@@ -71,6 +71,7 @@
  */
 #define BOOTLOADER_RESET_KEY 0xB007B007
 uint32_t reset_key  __attribute__ ((section (".noinit,\"aw\",@nobits;")));
+
 /** \brief initialize MCU status by watchdog reset
  *
  * FIXME: needs doc
